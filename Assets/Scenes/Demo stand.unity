@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4012108634830722, guid: cbb8e6d260264894d9ad98063dbb89ea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4012108634830722, guid: cbb8e6d260264894d9ad98063dbb89ea, type: 3}
       propertyPath: m_LocalRotation.y
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4012108634830722, guid: cbb8e6d260264894d9ad98063dbb89ea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4012108634830722, guid: cbb8e6d260264894d9ad98063dbb89ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1383,6 +1383,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380666669}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &413794888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413794889}
+  - component: {fileID: 413794891}
+  - component: {fileID: 413794890}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &413794889
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413794888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1341912461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &413794890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413794888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &413794891
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413794888}
+  m_CullTransparentMesh: 0
 --- !u!1 &455966742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,8 +1845,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1423104932}
-        m_MethodName: resetRotation
+      - m_Target: {fileID: 1423104933}
+        m_MethodName: ResetRotation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2355,8 +2433,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1423104932}
-        m_MethodName: setRotation
+      - m_Target: {fileID: 1423104933}
+        m_MethodName: SetRotation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3233,7 +3311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1341912461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3244,14 +3322,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 413794889}
   m_Father: {fileID: 939152495}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -400, y: -450}
+  m_SizeDelta: {x: 584, y: 104}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1341912462
 MonoBehaviour:
@@ -3299,6 +3378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423104931}
+  - component: {fileID: 1423104933}
   - component: {fileID: 1423104932}
   m_Layer: 0
   m_Name: CarPlace
@@ -3331,10 +3411,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423104930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4934072550fce4a8693defb4120c5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 66b40008478802c4097d7c36bfc2fa22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 1514720647}
+  carSelect: {fileID: 1474339475}
+  firstCar: {fileID: 1908803313}
+--- !u!114 &1423104933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423104930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb67a35f41a0f04bb776c7d234cb100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detailSelect: {fileID: 2062029535}
+  inputSpeed: {fileID: 1514720647}
+  description: {fileID: 1341912460}
 --- !u!1 &1451022791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,19 +3609,33 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Black car
-      m_Image: {fileID: 0}
-    - m_Text: Blue car
-      m_Image: {fileID: 0}
-    - m_Text: Green car
-      m_Image: {fileID: 0}
-    - m_Text: White car
-      m_Image: {fileID: 0}
-    - m_Text: Yellow car
+    - m_Text: car 1203 black
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423104932}
+        m_MethodName: ChangeCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1423104933}
+        m_MethodName: Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1474339478
 MonoBehaviour:
@@ -3688,8 +3798,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1895776235}
   - {fileID: 2144130521}
+  - {fileID: 1895776235}
   m_Father: {fileID: 1637170124}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4555,7 +4665,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1514720648}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4605,6 +4715,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895776234}
   m_CullTransparentMesh: 0
+--- !u!1 &1908803313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1313628572427264, guid: cbb8e6d260264894d9ad98063dbb89ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 174817604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1962992269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,7 +4779,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -4674,7 +4790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Black car
+  m_Text: car 1203 black
 --- !u!222 &1962992272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4954,23 +5070,15 @@ MonoBehaviour:
     m_Options:
     - m_Text: Assembled
       m_Image: {fileID: 0}
-    - m_Text: Blue car
-      m_Image: {fileID: 0}
-    - m_Text: Green car
-      m_Image: {fileID: 0}
-    - m_Text: White car
-      m_Image: {fileID: 0}
-    - m_Text: Yellow car
-      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1423104933}
+        m_MethodName: SetElement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5263,7 +5371,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140574342}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423104932}
+        m_MethodName: OpenNewCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2140574342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5331,7 +5450,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1514720648}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

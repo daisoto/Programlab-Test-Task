@@ -1,52 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
 	public float dragSpeed = 2;
-	public float scrollSpeed = 2;
+	public float scrollSpeed = 1;
 
 	Camera cam;
 	Transform thisTransform;
+	Vector3 currentPos;
      
-    void Drag()
+    void Drag() // перенос камеры с зажатием ЛКМ
     {
-        if (Input.GetMouseButtonDown(0))
+    	if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) // проверка чтобы было
+            currentPos = Input.mousePosition;
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject()) // приятнее работать с GUI
         {
-        	print(thisTransform.position);
-            //Vector3 dragOrigin = Input.mousePosition; 
-            //Vector3 pos = cam.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-            //Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
-            //thisTransform.Translate(move, Space.World);
-            thisTransform.Translate(Vector3.right * -Input.GetAxis("Mouse X") * .2f);
-            thisTransform.Translate(Vector3.up * -Input.GetAxis("Mouse Y") * .2f); 
+            Vector3 change = currentPos - Input.mousePosition;
+            transform.Translate(change * dragSpeed);
+            currentPos = Input.mousePosition;
         }
     }
 
-    void Scroll()
+    void Scroll() // изменение приближения камеры кручением колёсика мыши
     {
-    	if (Input.GetAxis("Mouse ScrollWheel") > 0)
+    	if (Input.GetAxis("Mouse ScrollWheel") > 0 && !EventSystem.current.IsPointerOverGameObject())
             if (cam.fieldOfView > 1)
                 cam.fieldOfView -= scrollSpeed;
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && !EventSystem.current.IsPointerOverGameObject())
             if (cam.fieldOfView < 100)
                 cam.fieldOfView += scrollSpeed;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
         thisTransform = transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Drag();
         Scroll();        
     }
-
 }
